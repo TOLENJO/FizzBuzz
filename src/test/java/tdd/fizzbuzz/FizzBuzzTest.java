@@ -3,11 +3,10 @@ package tdd.fizzbuzz;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-//During counting off, if the number is the multiples of the first special number,
-//        number three (3), then the student should say Fizz;
-//        if the number is the multiples of the second special number, number five (5), say Buzz;
-//        if the multiples of the third special number, number seven (7), say Whizz.
-
+//During counting off, if the number is the multiples of two special numbers, eg.
+//        the first and second numbers, then a student should say FizzBuzz instead of this number,
+//        so on and so forth. If the number is the multiples of three special numbers, say FizzBuzzWhizz.
+// FizzBuzz, FizzWhizz, FizzBuzzWhizz, FizzBuzz, FizzWhizz, BuzzWhizz
 public class FizzBuzzTest {
     @Test
     void should_return_order_number_when_countOf_case_given_normal_case() {
@@ -56,6 +55,45 @@ public class FizzBuzzTest {
 
         //When
         String actual = fizzBuzz.countOf(7);
+
+        //Then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void should_return_FizzBuzz_when_countOf_given_15() {
+        //Given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expected = "FizzBuzz";
+
+        //When
+        String actual = fizzBuzz.countOf(15);
+
+        //Then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void should_return_BuzzWhizz_when_countOf_given_21() {
+        //Given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expected = "FizzWhizz";
+
+        //When
+        String actual = fizzBuzz.countOf(21);
+
+        //Then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void should_return_BuzzWhizz_when_countOf_given_35() {
+        //Given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expected = "BuzzWhizz";
+
+        //When
+        String actual = fizzBuzz.countOf(35);
 
         //Then
         assertEquals(expected, actual);
