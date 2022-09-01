@@ -3,10 +3,6 @@ package tdd.fizzbuzz;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-//During counting off, if the number is the multiples of two special numbers, eg.
-//        the first and second numbers, then a student should say FizzBuzz instead of this number,
-//        so on and so forth. If the number is the multiples of three special numbers, say FizzBuzzWhizz.
-// FizzBuzz, FizzWhizz, FizzBuzzWhizz,
 public class FizzBuzzTest {
     @Test
     void should_return_order_number_when_countOf_case_given_normal_case() {
