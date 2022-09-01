@@ -23,13 +23,26 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_Fizz_when_countOf_given_Fizz_case() {
+    void should_return_Fizz_when_countOf_given_3() {
         //Given
         FizzBuzz fizzBuzz = new FizzBuzz();
         String expected = "Fizz";
 
         //When
         String actual = fizzBuzz.countOf(3);
+
+        //Then
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void should_return_Buzz_when_countOf_given_5() {
+        //Given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expected = "Buzz";
+
+        //When
+        String actual = fizzBuzz.countOf(5);
 
         //Then
         assertEquals(expected, actual);
