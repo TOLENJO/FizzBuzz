@@ -12,7 +12,7 @@ public class FizzBuzzTest {
         String expected = "1";
 
         //When
-        String actual = fizzBuzz.countOf(0);
+        String actual = fizzBuzz.countOf(1);
 
         //Then
         assertEquals(expected, actual);
