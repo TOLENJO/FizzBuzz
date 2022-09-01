@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 //During counting off, if the number is the multiples of two special numbers, eg.
 //        the first and second numbers, then a student should say FizzBuzz instead of this number,
 //        so on and so forth. If the number is the multiples of three special numbers, say FizzBuzzWhizz.
-// FizzBuzz, FizzWhizz, FizzBuzzWhizz, FizzBuzz, FizzWhizz, BuzzWhizz
+// FizzBuzz, FizzWhizz, FizzBuzzWhizz,
 public class FizzBuzzTest {
     @Test
     void should_return_order_number_when_countOf_case_given_normal_case() {
@@ -94,6 +94,18 @@ public class FizzBuzzTest {
 
         //When
         String actual = fizzBuzz.countOf(35);
+
+        //Then
+        assertEquals(expected, actual);
+    }
+    @Test
+    void should_return_FizzBuzzWhizz_when_countOf_given_105() {
+        //Given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expected = "FizzBuzzWhizz";
+
+        //When
+        String actual = fizzBuzz.countOf(105);
 
         //Then
         assertEquals(expected, actual);
