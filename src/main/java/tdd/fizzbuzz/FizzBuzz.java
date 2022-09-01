@@ -8,6 +8,8 @@ public class FizzBuzz {
             orderMessage = "Fizz";
         } else if (order % 5 == 0) {
             orderMessage = "Buzz";
+        } else if (order % 7 == 0) {
+            orderMessage = "Whizz";
         } else {
             orderMessage = String.valueOf(order);
         }
